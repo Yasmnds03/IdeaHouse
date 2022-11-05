@@ -1,0 +1,212 @@
+:root {
+    --hero-image:url(../img/background.jpg);
+}
+
+body {
+    margin:0;
+}
+
+nav {
+    display: flex;
+    background: linear-gradient(to right, #111, #24252a);
+    padding: 20px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+nav span {
+    color:white;
+    font-family: 'bold';
+    font-size: 150%;
+}
+
+nav a:first-of-type /*seleciona o primeiro "a" somente*/{
+    margin-left: auto;
+}
+
+nav a {
+    color: white;
+    font-family: 'regular';
+    text-decoration: none /*none retira o sublinhado*/;
+}
+
+nav a:hover {
+    color: #c5eff7;
+}
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     /*chama o link*/var(--hero-image);
+    height: 500px;
+    background-repeat: no-repeat /*evitar que a imagem seja repetida*/;
+    background-size: cover /*a imagem cobre a área*/;
+    padding: 10px;
+    position: relative /*possibilita a div hero text de se mobilizar onde quiser*/;
+}
+
+#hero-text {
+    position: absolute; /*top, right, bottom e left: diz quão distante o elemento vai ficar de 
+    acordo com o container*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+    border: 5px solid white;
+    padding: 20px;
+}
+
+#hero-text h1 {
+    margin: 0;
+    font-family: 'bold';
+    font-size: 270%;
+}
+
+
+#hero-text p {
+    font-size: 'regular';
+    font-size: 200%;
+}
+
+.brand-message {
+    display: flex;
+    padding: 20px 30px;
+}
+
+/*elementos pares:*/
+.brand-message:nth-child(even) {
+    background: linear-gradient(to right, #584129, #fff);
+    flex-direction: row-reverse;
+}
+
+.brand-message-left {
+    width: 70%;
+}
+
+.brand-message-left h1 {
+    font-family: 'bold';
+}
+
+.brand-message-left p {
+    font-family: 'regular';
+    font-size: 120%;
+}
+
+.brand-message-right {
+    width: 30%;
+    text-align: center;
+}
+
+.brand-message-right img {
+    width: 50%;
+
+}
+
+#chart {
+    position: relative;
+    left: -100%;
+    opacity: 1;
+    animation: slideToLeft 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    transition: opacity 5s;
+}
+
+#gear {
+    animation: rotate 5s infinite linear;
+    left: -100%;
+}
+
+.brand-message:hover #chart {
+    animation: slideToRight 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 1;
+}
+
+#values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#values:hover .value-card{
+    animation: none;
+}
+
+.value-card {
+    width: 20%;
+    margin: 0 20px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff;
+    background-color: #fff;
+}
+
+.value-card:nth-child(1) {
+    animation: shake1 1s infinite linear;
+}
+
+.value-card:nth-child(2) {
+    animation: shake2 1s infinite linear;
+}
+
+.value-card:nth-child(3) {
+    animation: shake3 1s infinite linear;
+}
+
+.value-card img {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.value-card h1 {
+    font-family: 'bold';
+}
+
+.value-card p {
+    font-family: 'regular';
+}
+
+footer {
+    background: linear-gradient(to right, #111, #24252a);
+    margin-top: 30px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: baseline;
+    color: white;
+}
+
+#copyright {
+    margin-right: 40px;
+}
+
+#copyright span {
+    font-family: 'bold';
+    font-size: 80%;
+}
+
+#address {
+    font-family: 'regular'
+}
+
+#address h3 {
+    font-family: 'bold';
+}
+
+#content {
+    padding: 20px;
+}
+
+#about-title {
+    font-family: 'bold';
+}
+
+.about-paragraph {
+    font-family: 'regular';
+    text-indent: 30px;
+    text-align: justify;
+}
